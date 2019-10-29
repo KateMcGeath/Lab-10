@@ -105,8 +105,13 @@ public class Recursion {
      */
     public int treeSum(Tree tree)
     {
-        //TODO
-    	
+    	ArrayList<Tree> children;
+    	int sum = 0;
+    	while((children = tree.getChildren()) != null) {
+	    	for(int index = 0; index < children.size(); index++) {
+	    		sum = sum + children.get(index).getValue();
+	    	} 
+    	} return sum;
     }
 
     /**

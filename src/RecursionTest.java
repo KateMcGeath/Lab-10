@@ -23,5 +23,17 @@ public class RecursionTest {
 		Assert.assertEquals(expected, actual);
 	}
 
+	public void testTreeSum() {
+		Recursion recursion = new Recursion();
+		Tree tree = new Tree(5);
+		Tree child1 = new Tree(7);
+		Tree child2 = new Tree(8);
+		tree.add(child1);
+		tree.add(child2);
+		
+		int expected = recursion.treeSum(tree);
+		int actual = 20;
+		Assert.assertEquals(expected, actual);
+	}
 }
 

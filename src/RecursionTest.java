@@ -1,7 +1,7 @@
 import org.junit.Assert;
-import org.junit.Test;
+
 public class RecursionTest {
-	@Test
+
 	public void testFactorial() {
 		Recursion recursion = new Recursion();
 		int expected = recursion.factorial(10);
@@ -9,7 +9,13 @@ public class RecursionTest {
 		Assert.assertEquals(expected, actual);
 	}
 	
-	//TODO: GENERATE AND COMPLETE TESTS FOR ALL METHODS IN THE RECURSION CLASS.
+
+	public void testNaryTreeSize() {
+		Recursion recursion = new Recursion();
+		int expected = recursion.nnaryTreeSize(4, 3);
+		int actual = 21;
+		Assert.assertEquals(expected, actual);
+	}
 
 }
 

@@ -27,10 +27,8 @@ public class Recursion {
          * This lets our recursion know when to stop.
          */
         if (value == 1)
-        {
             return 1;
 
-        }
         /*
          * Here is the recursive statement. The function calls itself when the base case is not met.
          * Something is altered when the function makes a new call to itself. In this case, the value
@@ -39,10 +37,6 @@ public class Recursion {
          * By doing this, we break up the equation n! into n! = n * (n-1)!.
          */
         return value = value * factorial(value - 1);
-
-
-        //TODO
-
     }
 
     /**
@@ -96,7 +90,7 @@ public class Recursion {
         else {
         	int size = 1;
         	for(int index = 2; index <= height; index ++) {
-        		size = size * branchingFactor;
+        		size = size + (size * branchingFactor);
         	} return size;
         }
     }

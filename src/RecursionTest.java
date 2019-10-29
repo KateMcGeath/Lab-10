@@ -35,5 +35,12 @@ public class RecursionTest {
 		int actual = 20;
 		Assert.assertEquals(expected, actual);
 	}
+	
+	public void testCircledSquare() {
+		Recursion recursion = new Recursion();
+		double expected = recursion.circledSquared(true, 12, 9);
+		double actual = ;
+		Assert.assertEquals(expected, actual);
+	}
 }
 

@@ -117,7 +117,7 @@ public class Recursion {
     /**
      * This function computes the area of a series of squares and circles. Specifically, we consider a series
      * of squares and circles in which each successive shape is inscribed in the other. This function sums
-     * the area of each shape and returns it. At each level of recursion, the funciton switches between a
+     * the area of each shape and returns it. At each level of recursion, the function switches between a
      * circle being inscribed by a square, and a square being inscribed by a circle.
      * 
      * A circle inscribed in a square has the diameter equal to the width of a square. A square inscribed in a 
@@ -140,38 +140,29 @@ public class Recursion {
      */
     public double circledSquared(boolean square, double length, int depth)
     {
-    	//TODO:
         /*
          * Compute the area of the current shape. Remember that:
          *  If the shape is a square, length refers to the square's width.
          *  If the shape is a circle, length refers to the circle's raidus.
          */
         double area = 0;
-        
-        
-        
-        /*
-         * Simply return the area on the base case:
-         */
-        if (depth == 1)
-        {
-            return area;
-        }
 
-        /*
-         * If the current shape is a square, the next is an inscribed circle.
-         * 
-         * We have a square of width <length>. Thus, the radius of the inscribed
-         * circle will be <length> / 2.
-         */
-        
-        
-        
-        
-        //TODO: Complete the requirements from the block of comments above.
-        
-        
-        
+        //Simply return the area on the base case:
+        if (depth == 1)
+            return area;
+        else {
+        	for(int index = 2; index < depth; index++) {
+	        	if(square) {
+	        		area = area + (length * length * 2);
+	        		square = false;
+	        	}
+	        	 else {
+	        		area = area + ((length/2) * (length/2) * Math.PI);
+	        		length = Math.sqrt(2) * length;
+	        		square = true;
+	        	 }
+        	} return area;
+        } 
         
         /*
          * If the current shape is a circle, the next in an inscribed square.
@@ -188,13 +179,6 @@ public class Recursion {
          *  => width = 2 * x = 2 * y / sqrt(2) = sqrt(2) * y
          *  => width = sqrt(2) * <length>
          */
-        
-        
-        
-        //TODO: Complete the requirements from the block of comments above.
-        
-        
-        
     }
 
 }

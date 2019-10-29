@@ -85,13 +85,15 @@ public class Recursion {
      */
     public int nnaryTreeSize(int branchingFactor, int height)
     {
+    	int sum = 1;
         if (height == 1)
             return 1;
         else {
         	int size = 1;
         	for(int index = 2; index <= height; index ++) {
-        		size = size + (size * branchingFactor);
-        	} return size;
+        		size = (size * branchingFactor);
+        		sum = sum + size;
+        	} return sum;
         }
     }
 

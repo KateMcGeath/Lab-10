@@ -32,28 +32,21 @@ public class Tree {
     {
         this.value = value;
         children = new ArrayList<Tree>();
-
-        //TODO
     }
 
     public int getValue()
     {
         return value;
-
-        //TODO
     }
 
     public ArrayList<Tree> getChildren()
     {
         return children;
-
     }
 
     public void add(Tree child)
     {
-        //TODO
         children.add(child);
-
     }
 }
 

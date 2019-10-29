@@ -57,10 +57,10 @@ public class Recursion {
      */
     public int fibonacci(int n)
     {
-        //TODO
-       
-        
-
+    	if (n <= 1)
+    		return n;
+    	else
+    		return n = fibonacci(n-1) + fibonacci(n-2);
     }
     /**
      * In a binary tree, each node has two children. In a ternary tree, each node has 3 children.

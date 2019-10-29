@@ -6,15 +6,13 @@ public class Recursion {
      * 
      * This lab tests your ability to implement recursion for several functions.
      * 
-     * @author Stephen
-     * @version 2018-04-23
-     * @author Feras salous
-     * @version 2019-10-23
+     * @author Kate McGeath
+     * @version 2019-10-29
      */
 
     /**
        * Function to compute the value n! of some input value n.
-       * n! may bel defined as n! = 1 * 2 * ... * 2, 1! = 1.
+       * n! may be defined as n! = 1 * 2 * ... * 2, 1! = 1.
        * 
        * THIS FUNCTION IS GIVEN TO YOU AS AN EXAMPLE OF RECURSION.
        * YOU SHOULD NOT CHANGE IT!
@@ -94,18 +92,13 @@ public class Recursion {
     public int nnaryTreeSize(int branchingFactor, int height)
     {
         if (height == 1)
-        {
             return 1;
-
-	  
+        else {
+        	int size = 1;
+        	for(int index = 2; index <= height; index ++) {
+        		size = size * branchingFactor;
+        	} return size;
         }
-        
-        //TODO:
-        else
-        {
-        	
-        }
-      
     }
 
     /**

@@ -9,6 +9,12 @@ public class RecursionTest {
 		Assert.assertEquals(expected, actual);
 	}
 	
+	public void testFibonacci() {
+		Recursion recursion = new Recursion();
+		int expected = recursion.fibonacci(8);
+		int actual = 13;
+		Assert.assertEquals(expected, actual);
+	}
 
 	public void testNaryTreeSize() {
 		Recursion recursion = new Recursion();
